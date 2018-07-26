@@ -30,6 +30,7 @@ html, body {
     background: $white;
     border-bottom: 1px solid $low;
     box-shadow: 0 0 5px $low;
+    background: $white;
     .search {
         width: 30px;
         box-sizing: border-box;
@@ -88,6 +89,43 @@ html, body {
         }
         li.strong, a.strong {
             font-weight: bold;
+        }
+    }
+}
+
+.post-grid {
+    width: 80%;
+    margin: auto;
+    .grid {
+        display: grid;
+        grid-templates-column: 1fr 1fr 1fr;
+        grid-templates-row: auto;
+        grid-template-areas:
+        "post1 post1 post2"
+        "post1 post1 post3";
+        height: 30rem;
+        h1 {
+            font-size: 0.9rem;
+            color: $white;
+            background: rgba(8, 9, 10, 0.5);
+        }
+        .post {
+            background-size: cover;
+            background-position: center;
+            border: 1px solid $white;
+        }
+        .post1 {
+            grid-area: post1;
+            background-image: url('../images/post1.jpg');
+            h1 {font-size: 1rem;}
+        }
+        .post2 {
+            grid-area: post2;
+            background-image: url('../images/post2.jpg');
+        }
+        .post3 {
+            grid-area: post3;
+            background-image: url('../images/post3.jpg');
         }
     }
 }

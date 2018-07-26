@@ -20,7 +20,8 @@ html, body {
   height: 60px;
   background: #fefeff;
   border-bottom: 1px solid #a7a2a9;
-  box-shadow: 0 0 5px #a7a2a9; }
+  box-shadow: 0 0 5px #a7a2a9;
+  background: #fefeff; }
   .nav-bar .search {
     width: 30px;
     box-sizing: border-box;
@@ -72,5 +73,34 @@ html, body {
       font-size: 0.9rem; }
     .blog-body .menu .menu-ul li.strong, .blog-body .menu .menu-ul a.strong {
       font-weight: bold; }
+
+.post-grid {
+  width: 80%;
+  margin: auto; }
+  .post-grid .grid {
+    display: grid;
+    grid-templates-column: 1fr 1fr 1fr;
+    grid-templates-row: auto;
+    grid-template-areas: "post1 post1 post2" "post1 post1 post3";
+    height: 30rem; }
+    .post-grid .grid h1 {
+      font-size: 0.9rem;
+      color: #fefeff;
+      background: rgba(8, 9, 10, 0.5); }
+    .post-grid .grid .post {
+      background-size: cover;
+      background-position: center;
+      border: 1px solid #fefeff; }
+    .post-grid .grid .post1 {
+      grid-area: post1;
+      background-image: url("../images/post1.jpg"); }
+      .post-grid .grid .post1 h1 {
+        font-size: 1rem; }
+    .post-grid .grid .post2 {
+      grid-area: post2;
+      background-image: url("../images/post2.jpg"); }
+    .post-grid .grid .post3 {
+      grid-area: post3;
+      background-image: url("../images/post3.jpg"); }
 
 /*# sourceMappingURL=style.css.map */
