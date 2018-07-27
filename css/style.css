@@ -70,9 +70,13 @@ html, body {
     .blog-body .menu .menu-ul li, .blog-body .menu .menu-ul a {
       color: #575a5e;
       text-decoration: none;
-      font-size: 0.9rem; }
+      font-size: 0.9rem;
+      transition: .3s; }
     .blog-body .menu .menu-ul li.strong, .blog-body .menu .menu-ul a.strong {
       font-weight: bold; }
+    .blog-body .menu .menu-ul a:hover {
+      color: #a7a2a9;
+      transition: .3s; }
 
 .post-grid {
   width: 80%;
@@ -81,16 +85,19 @@ html, body {
     display: grid;
     grid-templates-column: 1fr 1fr 1fr;
     grid-templates-row: auto;
+    grid-gap: 5px;
     grid-template-areas: "post1 post1 post2" "post1 post1 post3";
     height: 30rem; }
     .post-grid .grid h1 {
       font-size: 0.9rem;
       color: #fefeff;
-      background: rgba(8, 9, 10, 0.5); }
+      margin-left: 5px; }
     .post-grid .grid .post {
       background-size: cover;
-      background-position: center;
-      border: 1px solid #fefeff; }
+      background-position: center; }
+    .post-grid .grid .post:hover {
+      box-shadow: 0 0 5px 3px #a7a2a9;
+      transition: .3s; }
     .post-grid .grid .post1 {
       grid-area: post1;
       background-image: url("../images/post1.jpg"); }

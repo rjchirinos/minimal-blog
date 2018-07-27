@@ -86,9 +86,14 @@ html, body {
             color: $medium;
             text-decoration: none;
             font-size: 0.9rem;
+            transition: .3s;
         }
         li.strong, a.strong {
             font-weight: bold;
+        }
+        a:hover {
+            color: $low;
+            transition: .3s;
         }
     }
 }
@@ -100,6 +105,7 @@ html, body {
         display: grid;
         grid-templates-column: 1fr 1fr 1fr;
         grid-templates-row: auto;
+        grid-gap: 5px;
         grid-template-areas:
         "post1 post1 post2"
         "post1 post1 post3";
@@ -107,12 +113,15 @@ html, body {
         h1 {
             font-size: 0.9rem;
             color: $white;
-            background: rgba(8, 9, 10, 0.5);
-        }
+            margin-left: 5px;
+            }
         .post {
             background-size: cover;
             background-position: center;
-            border: 1px solid $white;
+        }
+        .post:hover {
+            box-shadow: 0 0 5px 3px $low;
+            transition: .3s;
         }
         .post1 {
             grid-area: post1;
